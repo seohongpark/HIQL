@@ -1,0 +1,48 @@
+_target_: calvin_env.scene.play_table_scene.PlayTableScene
+_recursive_: false
+data_path: ${data_path}
+global_scaling: 0.8
+euler_obs: ${robot.euler_obs}
+robot_base_position: [0.3, 0.15, 0.6]
+robot_base_orientation: [0, 0, 1.5707963]
+robot_initial_joint_positions: [-0.017792060227770554, -0.7601235411041661, 0.019782607023391807, -2.342050140544315, 0.029840531355804868, 1.5411935298621688, 0.7534486589746342]
+surfaces: []
+objects:
+  fixed_objects:
+    table:
+      file: table/hightable.urdf
+      initial_pos: [0.3, 0.7, 0.02]
+      initial_orn: [0, 0, 0]
+    bin:
+      file: ais_objects/bin_10_30_50/bin_10_30_50.urdf
+      initial_pos: [0.7, 0.75, 0.6]
+      initial_orn: [1.57, 0, 0]
+  movable_objects:
+    frying_pan:
+      file: tabletop/frying_pan/frying_pan.urdf
+      initial_pos: [0.15, 0.9, 0.63]
+      initial_orn: [0, 0, 0]
+    knife:
+      file: tabletop/kitchen_knife/kitchen_knife.urdf
+      initial_pos: [0.35, 0.92, 0.61]
+      initial_orn: [0, 0, 0]
+    bowl:
+      file: 024_bowl/google_16k/textured.urdf
+      initial_pos: [0.2, 0.45, 0.62]
+      initial_orn: [0, 0, 0]
+    frying_pan_2:
+      file: tabletop/frying_pan_2/frying_pan.urdf
+      initial_pos: [-0.1, 0.6, 0.62]
+      initial_orn: [0, 0, -1.57]
+    whisk:
+      file: tabletop/whisk/whisk.urdf
+      initial_pos: [0.13, 0.7, 0.62]
+      initial_orn: [0, 0, 0]
+    spatula:
+      file: tabletop/spatula/spatula.urdf
+      initial_pos: [0.4, 0.5, 0.61]
+      initial_orn: [0, 0, 0]
+    teapot_2:
+      file: tabletop/teapot_2/teapot.urdf
+      initial_pos: [-0.1, 0.85, 0.63]
+      initial_orn: [0, 0, 0]

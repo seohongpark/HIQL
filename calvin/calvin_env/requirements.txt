@@ -1,0 +1,15 @@
+cloudpickle
+gitpython
+gym
+hydra-core
+hydra-colorlog
+matplotlib
+numba
+numpy
+numpy-quaternion
+omegaconf
+opencv-python
+pandas
+pybullet
+scipy
+rich

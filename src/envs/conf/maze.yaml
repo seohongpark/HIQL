@@ -1,0 +1,10 @@
+id: maze
+reward_norm: 1.
+screen_size: [32, 32]
+action_repeat: 1
+frame_stack: 1
+absorbing_state: false
+pixel_ob: false
+state_ob: true
+agent_centric_view: false
+max_episode_steps: 2000

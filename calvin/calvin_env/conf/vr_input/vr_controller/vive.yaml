@@ -1,0 +1,10 @@
+# @package _group_
+POSITION: 1
+ORIENTATION: 2
+ANALOG: 3
+BUTTONS: 6
+BUTTON_A: 2
+BUTTON_B: 1
+vr_controller_id: 3
+gripper_orientation_offset: [0, 3, 3.14]
+gripper_position_offset: [-0.2, 0.3, 0]

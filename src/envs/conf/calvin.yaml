@@ -1,0 +1,27 @@
+defaults:
+  - calvin_conf/cameras@cameras: static_only  # no image: no_cameras
+  - calvin_conf/scene@scene_cfg: calvin_scene_D
+  - calvin_conf/robot@robot_cfg: panda_longer_finger
+  - calvin_conf/tasks@tasks: customized_tasks
+
+id: calvin
+reward_norm: 1.
+screen_size: [200, 200]
+action_repeat: 1
+frame_stack: 1
+absorbing_state: false
+pixel_ob: false
+state_ob: true
+max_episode_steps: 360
+num_sequences: 1000
+
+data_path: data
+save_dir: tmp
+record: true
+seed: 0
+bullet_time_step: 240.0
+use_vr: false
+show_gui: false
+use_scene_info: true
+use_egl: false
+control_freq: 30

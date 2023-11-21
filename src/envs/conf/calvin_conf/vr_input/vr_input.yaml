@@ -1,0 +1,7 @@
+_target_: calvin_env.io_utils.vr_input.VrInput
+limit_angle: [90, 0, 0, -1]
+visualize_vr_pos: true
+reset_button_queue_len: 60
+
+defaults:
+  - vr_controller: vive

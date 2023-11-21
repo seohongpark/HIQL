@@ -1,0 +1,4 @@
+gpus: 1
+precision: 16
+val_check_interval: 1.0
+max_epochs: 100

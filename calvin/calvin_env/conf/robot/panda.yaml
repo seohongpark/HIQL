@@ -1,0 +1,22 @@
+_target_: calvin_env.robot.robot.Robot
+filename: franka_panda/panda.urdf
+base_position: ${scene.robot_base_position}
+base_orientation: ${scene.robot_base_orientation}
+initial_joint_positions: ${scene.robot_initial_joint_positions}
+max_joint_force: 200.0
+gripper_force: 200
+arm_joint_ids: [0, 1, 2, 3, 4, 5, 6]
+lower_joint_limits: [-2.8973, -1.7628, -2.8973, -3.0718, -2.8973, -0.0175, -2.8973]
+upper_joint_limits: [2.8973, 1.7628, 2.8973, -0.0698, 2.8973, 3.7525, 2.8973]
+gripper_joint_ids: [9, 10]
+gripper_joint_limits: [0, 0.04]
+tcp_link_id: 13
+end_effector_link_id: 7
+gripper_cam_link: 12
+use_nullspace: true
+max_velocity: 2
+use_ik_fast: false
+magic_scaling_factor_pos: 1 # 1.6
+magic_scaling_factor_orn: 1 # 2.2
+use_target_pose: true
+euler_obs: true

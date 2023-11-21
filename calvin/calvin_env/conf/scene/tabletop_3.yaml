@@ -1,0 +1,48 @@
+_target_: calvin_env.scene.play_table_scene.PlayTableScene
+_recursive_: false
+data_path: ${data_path}
+global_scaling: 0.8
+euler_obs: ${robot.euler_obs}
+robot_base_position: [0.3, 0.15, 0.6]
+robot_base_orientation: [0, 0, 1.5707963]
+robot_initial_joint_positions:  [-1.4653239989567401, 1.4817260599394233, 1.525733453119315, -2.435192704551518, -1.809600862016179, 1.8558817172819435, -1.23183583862092]
+surfaces: []
+objects:
+  fixed_objects:
+    table:
+      file: table/hightable.urdf
+      initial_pos: [0.3, 0.7, 0.02]
+      initial_orn: [0, 0, 0]
+    bin:
+      file: ais_objects/bin_10_30_50/bin_10_30_50.urdf
+      initial_pos: [0.7, 0.75, 0.6]
+      initial_orn: [1.57, 0, 0]
+  movable_objects:
+    hammer:
+      file: tabletop/hammer/hammer.urdf
+      initial_pos: [0.18, 0.67, 0.62]
+      initial_orn: [0, 0, 1.57]
+    hammer_2:
+      file: tabletop/hammer_2/hammer.urdf
+      initial_pos: [0.4, 0.8, 0.61]
+      initial_orn: [0, 0, 0]
+    power_drill:
+      file: tabletop/power_drill/power_drill.urdf
+      initial_pos: [0.2, 0.45, 0.62]
+      initial_orn: [3.14, 0, 0]
+    skillet:
+      file: tabletop/skillet/textured.urdf
+      initial_pos: [0.1, 0.9, 0.63]
+      initial_orn: [0, 0, 1]
+    teapot:
+      file: tabletop/teapot/teapot.urdf
+      initial_pos: [-0.1, 0.6, 0.62]
+      initial_orn: [0, 0, 0]
+    teapot_lid:
+      file: tabletop/teapot_lid/teapot_lid.urdf
+      initial_pos: [0.4, 0.5, 0.61]
+      initial_orn: [0, 0, 0]
+    salt:
+      file: ais_objects/salt/salt.urdf
+      initial_pos: [-0.15, 0.85, 0.63]
+      initial_orn: [1.57, -1.57, 0]

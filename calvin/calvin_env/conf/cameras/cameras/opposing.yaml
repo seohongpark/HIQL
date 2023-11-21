@@ -1,0 +1,10 @@
+_target_: calvin_env.camera.static_camera.StaticCamera
+name: opposing
+fov: 75
+aspect: 1
+nearval: 0.01
+farval: 2
+width: 200
+height: 200
+look_at: [ 0.4, 0.5, 0.6 ]
+look_from: [ 0.4, 1.5, 0.9 ]

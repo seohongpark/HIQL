@@ -1,0 +1,4 @@
+record: ${record}
+record_fps: 30.0
+show_fps: false
+enable_tts: true

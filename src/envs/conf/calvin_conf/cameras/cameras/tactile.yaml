@@ -1,0 +1,7 @@
+_target_: calvin_env.camera.tactile_sensor.TactileSensor
+name: tactile
+width: 120
+height: 160
+digit_link_ids: [10, 12] # ${robot.digit_link_ids}
+visualize_gui: true
+config_path: conf/digit_sensor/config_digit.yml

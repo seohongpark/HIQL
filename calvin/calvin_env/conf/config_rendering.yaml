@@ -1,0 +1,20 @@
+load_dir: ???
+data_path: data
+save_dir: ???
+show_gui: false
+processes: 1
+set_static_cam: false
+
+env:
+  cameras: ${cameras}
+  show_gui: ${show_gui}
+  use_vr: false
+
+hydra:
+  run:
+    dir: ${save_dir}/${now:%Y-%m-%d}/${now:%H-%M-%S}
+
+defaults:
+  - cameras: static_and_tactile
+  - override hydra/job_logging: colorlog
+  - override hydra/hydra_logging: colorlog

@@ -1,0 +1,11 @@
+_target_: calvin_env.camera.static_camera.StaticCamera
+name: static
+fov: 10
+aspect: 1
+nearval: 0.01
+farval: 10
+width: 200
+height: 200
+look_at: [ -0.026242351159453392, -0.0302329882979393, 0.3920000493526459]
+look_from: [ 2.871459009488717, -2.166602199425597, 2.555159848480571]
+up_vector: [ 0.4041403970338857, 0.22629790978217404, 0.8862616969685161]

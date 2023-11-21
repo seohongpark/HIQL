@@ -1,0 +1,6 @@
+defaults:
+  - panda
+
+filename: franka_panda/panda_longer_finger.urdf
+gripper_joint_ids: [9, 11]
+tcp_link_id: 15

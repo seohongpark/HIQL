@@ -1,0 +1,433 @@
+<?xml version="1.0" encoding="utf-8"?>
+<robot
+  name="playtable_8" concave="yes">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.00874455174683536 0.501032855485917 -0.0450543406685957"
+        rpy="0 0 0" />
+      <mass
+        value="0.0" />
+        <!-- value="46.9509300649509" -->
+      <inertia
+        ixx="1.52184000058477"
+        ixy="-0.254749727975985"
+        ixz="0.308157438917355"
+        iyy="6.45099220326934"
+        iyz="0.279082713309664"
+        izz="6.27233522074152" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/base_link.obj" />
+      </geometry>
+      <material name="white">
+       <color rgba="1 1 1 1"/>
+     </material>
+    </visual>
+    <collision concave="yes">
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/base_link.obj" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="button_link">
+    <inertial>
+      <origin
+        xyz="2.77555756156289E-17 0.0149999999999999 -2.77555756156289E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.153812376319756" />
+      <inertia
+        ixx="7.30608787518843E-05"
+        ixy="-1.78342506783922E-37"
+        ixz="0"
+        iyy="0.000123049901055805"
+        iyz="-3.74688824324604E-37"
+        izz="7.30608787518843E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/button_link.STL" />
+      </geometry>
+      <material
+        name="black">
+        <color
+          rgba="0.0 0.0 0.0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/button_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="base__button"
+    type="prismatic">
+    <origin
+      xyz="-0.15 -0.15 0.575"
+      rpy="1.5707963267949 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="button_link" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="0"
+      upper="0.025"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="switch_link">
+    <inertial>
+      <origin
+        xyz="0 0.0501954388893268 -0.01"
+        rpy="0 0 0" />
+      <mass
+        value="0.238786703751891" />
+      <inertia
+        ixx="0.000149903694690068"
+        ixy="2.96995011323846E-20"
+        ixz="5.67423673137366E-21"
+        iyy="0.000673716537106872"
+        iyz="3.52365706057789E-19"
+        izz="0.000767827685519096" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/switch_link.obj" />
+      </geometry>
+      <material
+        name="gray">
+        <color
+          rgba="0.4 0.4 0.4 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/switch_link_vhacd2.obj" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="base__switch"
+    type="prismatic">
+    <origin
+      xyz="0.375 0.0761602540378436 0.618612159321677"
+      rpy="2.61799387799149 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="switch_link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="0.11"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="slide_link">
+    <inertial>
+      <origin
+        xyz="-0.175 -1.11022302462516E-16 0.0204147302446787"
+        rpy="0 0 0" />
+      <mass
+        value="1.54349139995684" />
+      <inertia
+        ixx="0.0102407243866408"
+        ixy="-3.58276094546118E-19"
+        ixz="-1.08016584477762E-20"
+        iyy="0.0146074020666347"
+        iyz="-2.34187669256869E-17"
+        izz="0.0232176606837711" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/slide_link.obj" />
+      </geometry>
+      <material name="white">
+       <color rgba="1 1 1 1"/>
+     </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/slide_link_vhacd2.obj" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="base__slide"
+    type="prismatic">
+    <origin
+      xyz="-0.125 0.09375 0.66908"
+      rpy="1.04719755119659 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="slide_link" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="0"
+      upper="0.35"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="drawer_link">
+    <inertial>
+      <origin
+        xyz="5.55111512312578E-17 0.033198054271063 0.0988554042464424"
+        rpy="0 0 0" />
+      <mass
+        value="4.23128077824699" />
+      <inertia
+        ixx="0.0592167745250431"
+        ixy="-2.00073458850934E-18"
+        ixz="-2.91103489387021E-18"
+        iyy="0.16375258619816"
+        iyz="-4.16732706455145E-05"
+        izz="0.11199026473436" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/drawer_link.obj" />
+      </geometry>
+      <material name="white">
+       <color rgba="1 1 1 1"/>
+     </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/drawer_link_vhacd2.obj" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="base__drawer"
+    type="prismatic">
+    <origin
+      xyz="0.225 0 0.4"
+      rpy="1.5707963267949 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="drawer_link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="0.275"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="led_link">
+    <inertial>
+      <origin
+        xyz="0 0.01 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.204" />
+      <inertia
+        ixx="4.93E-05"
+        ixy="-4.05952398432885E-21"
+        ixz="2.7554998213719E-21"
+        iyy="0.0007225"
+        iyz="2.15993401549847E-21"
+        izz="0.0006868" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/led_link.STL" />
+      </geometry>
+      <material
+        name="white">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/led_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="base__led"
+    type="fixed">
+    <origin
+      xyz="-0.15 0.2 0.809807621135331"
+      rpy="1.5707963267949 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="led_link" />
+    <axis
+      xyz="0 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="light_link">
+    <inertial>
+      <origin
+        xyz="-5.55111512312578E-17 0.0280266379242365 -0.035"
+        rpy="0 0 0" />
+      <mass
+        value="0.173918312098126" />
+      <inertia
+        ixx="8.23031895831843E-05"
+        ixy="1.89675370717113E-21"
+        ixz="4.04382946355204E-38"
+        iyy="8.738048875184E-05"
+        iyz="8.02658189462508E-38"
+        izz="8.23031895831843E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/light_link.STL" />
+      </geometry>
+      <material
+        name="white">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/light_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="base__light"
+    type="fixed">
+    <origin
+      xyz="0.375 0.165 0.80981"
+      rpy="1.5708 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="light_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="plank_link">
+    <inertial>
+      <origin
+        xyz="5.55111512312578E-17 0.0125 0"
+        rpy="0 0 0" />
+      <mass
+        value="2.84375" />
+      <inertia
+        ixx="0.00740559895833334"
+        ixy="9.9836950049708E-20"
+        ixz="8.52905709021932E-19"
+        iyy="0.107381184895833"
+        iyz="1.88079096131566E-34"
+        izz="0.100271809895833" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/plank_link.obj" />
+      </geometry>
+      <material name="white">
+       <color rgba="1 1 1 1"/>
+     </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/plank_link.obj" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="base__plank"
+    type="fixed">
+    <origin
+      xyz="-0.125 0.1125 0.525"
+      rpy="1.5708 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="plank_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+</robot>
