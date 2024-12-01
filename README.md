@@ -1,5 +1,7 @@
 # HIQL: Offline Goal-Conditioned RL with Latent States as Actions
 
+**Update (Dec 1, 2024):** We released a much cleaner implementation of HIQL in the [OGBench](https://github.com/seohongpark/ogbench) repository, which contains reference implementations of offline goal-conditioned RL algorithms, including GCBC, GCIVL, GCIQL, QRL, CRL, and HIQL. OGBench also provides a number of diverse benchmark environments, including Visual AntMaze, HumanoidMaze, and diverse state- and pixel-based manipulation environments. We highly recommend using this new benchmark (OGBench) for research, unless the goal is to reproduce the exact results of the HIQL paper.
+
 ## [Project Page](https://seohong.me/projects/hiql/)
 
 ## Overview
